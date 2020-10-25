@@ -1,20 +1,72 @@
 <!DOCTYPE html>
-<meta name="viewport" content="initial-scale=1">
-<style>
-html {
-  background: #333;
-  color: #ccc;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>idk</title>
+    <style>
+canvas {
+  height: 100vh;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
-
-marquee {
-  line-height: 60vh;
+body {
+  background: #000;
+  margin: 0;
 }
+    </style>
+  </head>
+  <canvas id="canvas" height="100" width="100">
+    (idk animation)
+  </canvas>
+  <script>
 
-@media (prefers-color-scheme: light) {
-  html {
-    background: #ccc;
-    color: #333;
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+
+context.fillRect(0, 0, canvas.width, canvas.height);
+context.fillStyle = '#fff';
+context.font = 'bold 55px monospace';
+context.textAlign = 'center';
+context.fillText('idk', 50, 70);
+const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+const data = pixels.data;
+
+const val = (x, y, color) => 4 * (
+  (y+canvas.height) % canvas.height * canvas.width +
+  (x+canvas.width) % canvas.width) + color;
+
+const loop = time => {
+  for (let x = 0; x < canvas.width; x++) {
+    for (let y = 0; y < canvas.height; y++) {
+      for (let color = 0; color < 3; color++) {
+        const i = val(x, y, color)
+        switch (Math.floor(Math.random() * 10)) {
+          case 0:
+            const up = val(x, y+1, color)
+            data[i] = data[up]
+            break;
+          case 1:
+            const down = val(x, y-1, color)
+            data[i] = data[down]
+            break;
+          case 2:
+            data[i] = data[val(x-1, y, color)]
+            break;
+          case 3:
+            data[i] = data[val(x+1, y, color)]
+            break;
+        }
+      }
+    }
   }
-}
-</style>
-<marquee>🚃</marquee>
+  context.putImageData(pixels, 0, 0);
+  requestAnimationFrame(loop);
+};
+loop();
+
+  </script>
+</html>
