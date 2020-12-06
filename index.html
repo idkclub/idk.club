@@ -3,30 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1">
-    <title>idk</title>
+    <title>idk club</title>
     <style>
-      html {
-        height: 100%;
+      :root {
+        color-scheme: dark light;
+        --background: #252a2f;
+        --shadow: 0 1vh 2vh #151515;
       }
       body {
-        background-image: url('idk.svg');
-        background-size: 100px auto;
-        display: flex;
-        height: 100%;
         margin: 0;
-        overflow: hidden;
       }
-      object, img {
-        display: block;
-        flex: 1;
-        max-width: 100vw;
-        max-height: 100vh;
+      header {
+        background: var(--background);
+        border-radius: 0 0 4em 4em;
+        box-shadow: var(--shadow);
+        height: 4em;
+        padding: 1em;
+        text-align: center;
+      }
+      img, object {
+        height: 100%;
+      }
+      nav {
+        margin: 1em;
+        text-align: center;
+      }
+      nav object {
+        background: var(--background);
+        border-radius: 1em;
+        box-shadow: var(--shadow);
+        width: 10em;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --background: #f7f7f9;
+          --shadow: 0 1vh 3vh #dadadc;
+        }
       }
     </style>
   </head>
   <body>
-    <object data="idk.svg">
-      <img src="idk.svg">
-    </object>
+    <header>
+      <object data="static/idk.svg">
+        <img alt="idk club logo" src="static/idk.svg">
+      </object>
+    </header>
+    <nav>
+      <a>
+        <object data="static/game.svg">
+          <img alt="games" src="static/game.svg">
+        </object>
+      </a>
+    </nav>
   </body>
 </html>

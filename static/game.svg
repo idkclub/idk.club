@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <style>
+    #player {
+      animation: 2s ease-in-out infinite alternate bounce;
+      transform: translate(10px, 22px);
+    }
+    @keyframes bounce {
+      to {
+        transform: translate(20px, 22px);
+      }
+    }
+    .enemy {
+      animation: 3s ease-in-out infinite alternate weave;
+    }
+    .enemy:nth-child(3) {
+      animation-delay: -2s;
+    }
+    .enemy:nth-child(4) {
+      animation-delay: -1s;
+    }
+    @keyframes weave {
+      to {
+        transform: translateY(10px);
+      }
+    }
+  </style>
+  <ref>
+    <g id="enemy">
+      <polygon fill="#fff10c" points="0,-1 3,4 0,2 -3,4" />
+      <polygon fill="#cc006b" points="1,1 1,3 0,4 -1,3 -1,1 0,0" />
+    </g>
+  </ref>
+  <use class="enemy" href="#enemy" x="5" y="5" />
+  <use class="enemy" href="#enemy" x="15" y="3" />
+  <use class="enemy" href="#enemy" x="25" y="5" />
+  <g id="player" transform="translate(15, 22)">
+    <polygon fill="#0093d3" points="0,0 1,3 3,5 1,5 0,6 -1,5 -3,5 -1,3" />
+    <polygon fill="#cc006b" points="0,2 1,4 0,3 -1,4" />
+  </g>
+</svg>
