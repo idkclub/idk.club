@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1">
-    <link rel="alternate" type="application/atom+xml" href="/feed.xml">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
     <title>idk Club</title>
     <style>
       html {
@@ -19,7 +19,7 @@
         min-height: 100vh;
         padding: 5vh 5vw;
       }
-      img, object, svg {
+      svg {
         display: inline-block;
         width: 80px;
         vertical-align: middle;
@@ -69,81 +69,122 @@
     </style>
   </head>
   <body>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 11">
-  <style>
-    #dot {
-      animation: 1s ease-in infinite alternate bounce;
-      animation-play-state: paused;
-      transform-origin: 2px 4px 0;
-    }
-    svg:hover #dot {
-      animation-play-state: running;
-    }
-    @keyframes bounce {
-      to {
-        transform: rotateZ(90deg);
-      }
-    }
-  </style>
-  <g fill="#0093d3">
-    <circle id="dot" cx="2" cy="2" r="1" />
-    <rect x="1" y="4" height="6" width="2" rx="1" />
-  </g>
-  <circle stroke="#cc006b" stroke-width="2" cx="7" cy="7" r="2" fill="none" />
-  <rect fill="#cc006b" y="1" x="8" height="7" width="2" rx="1" />
-  <g fill="#fff10c">
-    <rect y="1" x="11" height="9" width="2" rx="1" />
-    <rect y="6" x="12" height="5" width="2" rx="1" transform="rotate(-45 13 7)" />
-    <rect y="6" x="12" height="5" width="2" rx="1" transform="rotate(-135 13 7)" />
-  </g>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 11">
+      <style>
+        #dot {
+          animation: 1s ease-in infinite alternate bounce;
+          animation-play-state: paused;
+          transform-origin: 2px 4px 0;
+        }
+        svg:hover #dot {
+          animation-play-state: running;
+        }
+        @keyframes bounce {
+          to {
+            transform: rotateZ(90deg);
+          }
+        }
+      </style>
+      <g fill="#0093d3">
+        <circle id="dot" cx="2" cy="2" r="1" />
+        <rect x="1" y="4" height="6" width="2" rx="1" />
+      </g>
+      <circle
+        stroke="#cc006b"
+        stroke-width="2"
+        cx="7"
+        cy="7"
+        r="2"
+        fill="none"
+      />
+      <rect fill="#cc006b" y="1" x="8" height="7" width="2" rx="1" />
+      <g fill="#fff10c">
+        <rect y="1" x="11" height="9" width="2" rx="1" />
+        <rect
+          y="6"
+          x="12"
+          height="5"
+          width="2"
+          rx="1"
+          transform="rotate(-45 13 7)"
+        />
+        <rect
+          y="6"
+          x="12"
+          height="5"
+          width="2"
+          rx="1"
+          transform="rotate(-135 13 7)"
+        />
+      </g>
+    </svg>
     <main>
       <h1>Splash Page</h1>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7IsKn0uiS7--B6754WPDyXW1G5f4iF-mORMjLHfUvwbAHw/formResponse" method="POST">
-        <input name="entry.118506519" placeholder="email@example.com" required type="email">
-        <input type="submit" value="Subscribe">
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7IsKn0uiS7--B6754WPDyXW1G5f4iF-mORMjLHfUvwbAHw/formResponse"
+        method="POST"
+      >
+        <input
+          name="entry.118506519"
+          placeholder="email@example.com"
+          required
+          type="email"
+        />
+        <input type="submit" value="Subscribe" />
         <a href="/feed.xml">
-<svg class="rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
-  <style>
-    path {
-      animation: 2s ease-in-out infinite radiate;
-      animation-play-state: paused;
-      transform-origin: 3px 9px;
-      animation-delay: -.6s;
-    }
-    svg:hover path {
-      animation-play-state: running;
-    }
-    @keyframes radiate {
-      from {
-        transform: scale(0);
-        stroke-width: 2;
-        transform-origin: 4px 8px;
-      }
-      30% {
-        transform: scale(1);
-        stroke-width: 1;
-      }
-      80% {
-        opacity: 0.8;
-      }
-      to {
-        opacity: 0;
-        stroke-width: .5;
-        transform: scale(2);
-      }
-    }
-  </style>
-  <clipPath id="box">
-    <use href="#orange" />
-  </clipPath>
-  <rect id="orange" fill="#ea993d" x="1" y="1" height="10" width="10" rx="2" />
-  <circle fill="#fff" cx="4" cy="8" r="1" />
-  <g clip-path="url(#box)">
-    <path d="M 3 5 q 4 0, 4 4" stroke="white" fill="transparent"/>
-    <path d="M 3 3 q 6 0, 6 6" stroke="white" fill="transparent"/>
-  </g>
-</svg>
+          <svg
+            class="rss"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 12 12"
+          >
+            <style>
+              path {
+                animation: 2s ease-in-out infinite radiate;
+                animation-play-state: paused;
+                transform-origin: 3px 9px;
+                animation-delay: -0.6s;
+              }
+              svg:hover path {
+                animation-play-state: running;
+              }
+              @keyframes radiate {
+                from {
+                  transform: scale(0);
+                  stroke-width: 2;
+                  transform-origin: 4px 8px;
+                }
+                30% {
+                  transform: scale(1);
+                  stroke-width: 1;
+                }
+                80% {
+                  opacity: 0.8;
+                }
+                to {
+                  opacity: 0;
+                  stroke-width: 0.5;
+                  transform: scale(2);
+                }
+              }
+            </style>
+            <clipPath id="box">
+              <use href="#orange" />
+            </clipPath>
+            <rect
+              id="orange"
+              fill="#ea993d"
+              x="1"
+              y="1"
+              height="10"
+              width="10"
+              rx="2"
+            />
+            <circle fill="#fff" cx="4" cy="8" r="1" />
+            <g clip-path="url(#box)">
+              <path d="M 3 5 q 4 0, 4 4" stroke="white" fill="transparent" />
+              <path d="M 3 3 q 6 0, 6 6" stroke="white" fill="transparent" />
+            </g>
+          </svg>
         </a>
       </form>
     </main>
