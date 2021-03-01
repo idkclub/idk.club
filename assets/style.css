@@ -20,8 +20,6 @@ article {
 article h1 {
   align-items: center;
   display: flex;
-  font-size: 2em;
-  height: 50px;
 }
 
 body {
