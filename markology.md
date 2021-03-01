@@ -70,7 +70,7 @@
 
 ## What is this?
 
-An opionated, zettelkasten-inspired note creation and linking tool.
+An opinionated, zettelkasten-inspired note creation and linking tool.
 
 ## Supports:
 
