@@ -1,0 +1,57 @@
+<svg
+  class="rss"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 12 12"
+>
+  <title>RSS Feed</title>
+  <style>
+    path {
+      animation: 2s ease-in-out infinite radiate;
+      animation-play-state: paused;
+      transform-origin: 3px 9px;
+      animation-delay: -0.6s;
+    }
+    svg:hover path {
+      animation-play-state: running;
+    }
+    @keyframes radiate {
+      from {
+        transform: scale(0);
+        stroke-width: 2;
+        transform-origin: 4px 8px;
+      }
+      30% {
+        transform: scale(1);
+        stroke-width: 1;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      to {
+        opacity: 0;
+        stroke-width: 0.5;
+        transform: scale(2);
+      }
+    }
+  </style>
+  <clipPath id="box">
+    <use href="#orange" />
+  </clipPath>
+  <rect
+    id="orange"
+    fill="#ea993d"
+    x="1"
+    y="1"
+    height="10"
+    width="10"
+    rx="2"
+  />
+  <circle fill="#fff" cx="4" cy="8" r="1" />
+  <g clip-path="url(#box)">
+    <path d="M 3 5 q 4 0, 4 4" stroke="white" fill="transparent" />
+    <path d="M 3 3 q 6 0, 6 6" stroke="white" fill="transparent" />
+  </g>
+  <a href="/feed.xml" target="_top">
+    <rect width="12" height="12" fill="transparent" />
+  </a>
+</svg>

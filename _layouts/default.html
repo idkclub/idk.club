@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{page.title}} - {{site.title}}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    {%- feed_meta -%}
+  </head>
+  <body>
+    <header>
+      <object data="/assets/idk.svg" width="80"></object>
+      <object data="/assets/rss.svg" width="30"></object>
+    </header>
+    <article>
+      {{content}}
+    </article>
+    <footer>
+      Find an issue? Contact us at <a href="mailto:support@idk.club">support@idk.club</a>.
+    </footer>
+  </body>
+</html>
