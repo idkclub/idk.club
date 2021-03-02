@@ -84,3 +84,7 @@ An opinionated, zettelkasten-inspired note creation and linking tool.
 - To organize thoughts, without needing a heirarchy.
 - To create and discover interesting connections.
 - To track new knowledge, in a way that makes it easy to build on.
+
+## A Note on Data Privacy
+
+We don't store or process your Markology data in any way. If you choose to use iCloud, then those notes stored on Apple servers will be governed by Apple's relevant policies, but we have no way of accessing either local or cloud stored notes.
