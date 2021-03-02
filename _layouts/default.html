@@ -1,128 +1,129 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{page.title}} - {{site.title}}</title>
     <link rel="stylesheet" href="/assets/style.css">
     {%- feed_meta -%}
+    {% if page.css %}
+    <style>{{page.css}}</style>
+    {% endif %}
   </head>
   <body>
     <header>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 11" width="80">
-        <title>idk Logo</title>
-        <style>
-          #dot {
-            animation: 1s ease-in infinite alternate bounce;
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 11" width="80">
+          <title>idk Logo</title>
+          <style>
+            #dot {
+              animation: 1s ease-in infinite alternate bounce;
+              animation-play-state: paused;
+              transform-origin: 2px 4px 0;
+            }
+            svg:hover #dot {
+              animation-play-state: running;
+            }
+            @keyframes bounce {
+              to {
+                transform: rotateZ(90deg);
+              }
+            }
+          </style>
+          <g fill="#0093d3">
+            <circle id="dot" cx="2" cy="2" r="1" />
+            <rect x="1" y="4" height="6" width="2" rx="1" />
+          </g>
+          <circle
+            stroke="#cc006b"
+            stroke-width="2"
+            cx="7"
+            cy="7"
+            r="2"
+            fill="none"
+          />
+          <rect fill="#cc006b" y="1" x="8" height="7" width="2" rx="1" />
+          <g fill="#fff10c">
+            <rect y="1" x="11" height="9" width="2" rx="1" />
+            <rect
+              y="6"
+              x="12"
+              height="5"
+              width="2"
+              rx="1"
+              transform="rotate(-45 13 7)"
+            />
+            <rect
+              y="6"
+              x="12"
+              height="5"
+              width="2"
+              rx="1"
+              transform="rotate(-135 13 7)"
+            />
+          </g>
+        </svg>
+      </a>
+      <a href="/feed.xml" target="_top">
+        <svg
+          class="rss"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 12 12"
+          width="30"
+          id="rss"
+        >
+          <title>RSS Feed</title>
+          <style>
+          #rss path {
+            animation: 2s ease-in-out infinite radiate;
             animation-play-state: paused;
-            transform-origin: 2px 4px 0;
+            transform-origin: 3px 9px;
+            animation-delay: -0.6s;
           }
-          svg:hover #dot {
+          #rss:hover path {
             animation-play-state: running;
           }
-          @keyframes bounce {
+          @keyframes radiate {
+            from {
+              transform: scale(0);
+              stroke-width: 2;
+              transform-origin: 4px 8px;
+            }
+            30% {
+              transform: scale(1);
+              stroke-width: 1;
+            }
+            80% {
+              opacity: 0.8;
+            }
             to {
-              transform: rotateZ(90deg);
+              opacity: 0;
+              stroke-width: 0.5;
+              transform: scale(2);
             }
           }
-        </style>
-        <g fill="#0093d3">
-          <circle id="dot" cx="2" cy="2" r="1" />
-          <rect x="1" y="4" height="6" width="2" rx="1" />
-        </g>
-        <circle
-          stroke="#cc006b"
-          stroke-width="2"
-          cx="7"
-          cy="7"
-          r="2"
-          fill="none"
-        />
-        <rect fill="#cc006b" y="1" x="8" height="7" width="2" rx="1" />
-        <g fill="#fff10c">
-          <rect y="1" x="11" height="9" width="2" rx="1" />
+          </style>
+          <clipPath id="box">
+          <use href="#orange" />
+          </clipPath>
           <rect
-            y="6"
-            x="12"
-            height="5"
-            width="2"
-            rx="1"
-            transform="rotate(-45 13 7)"
-          />
-          <rect
-            y="6"
-            x="12"
-            height="5"
-            width="2"
-            rx="1"
-            transform="rotate(-135 13 7)"
-          />
-        </g>
-        <a href="/" target="_top">
-          <rect width="17" height="11" fill="transparent" />
-        </a>
-      </svg>
-      <svg
-        class="rss"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 12 12"
-        width="30"
-        id="rss"
-      >
-        <title>RSS Feed</title>
-        <style>
-        #rss path {
-          animation: 2s ease-in-out infinite radiate;
-          animation-play-state: paused;
-          transform-origin: 3px 9px;
-          animation-delay: -0.6s;
-        }
-        #rss:hover path {
-          animation-play-state: running;
-        }
-        @keyframes radiate {
-          from {
-            transform: scale(0);
-            stroke-width: 2;
-            transform-origin: 4px 8px;
-          }
-          30% {
-            transform: scale(1);
-            stroke-width: 1;
-          }
-          80% {
-            opacity: 0.8;
-          }
-          to {
-            opacity: 0;
-            stroke-width: 0.5;
-            transform: scale(2);
-          }
-        }
-        </style>
-        <clipPath id="box">
-        <use href="#orange" />
-        </clipPath>
-        <rect
-          id="orange"
-          fill="#ea993d"
-          x="1"
-          y="1"
-          height="10"
-          width="10"
-          rx="2"
-          />
-        <circle fill="#fff" cx="4" cy="8" r="1" />
-        <g clip-path="url(#box)">
-        <path d="M 3 5 q 4 0, 4 4" stroke="white" fill="transparent" />
-        <path d="M 3 3 q 6 0, 6 6" stroke="white" fill="transparent" />
-        </g>
-        <a href="/feed.xml" target="_top">
-          <rect width="12" height="12" fill="transparent" />
-        </a>
-      </svg>
+            id="orange"
+            fill="#ea993d"
+            x="1"
+            y="1"
+            height="10"
+            width="10"
+            rx="2"
+            />
+          <circle fill="#fff" cx="4" cy="8" r="1" />
+          <g clip-path="url(#box)">
+          <path d="M 3 5 q 4 0, 4 4" stroke="white" fill="transparent" />
+          <path d="M 3 3 q 6 0, 6 6" stroke="white" fill="transparent" />
+          </g>
+        </svg>
+      </a>
     </header>
-    <article>
+    <article role="main">
       {{content}}
     </article>
     <footer>
