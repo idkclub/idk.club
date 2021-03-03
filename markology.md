@@ -1,7 +1,7 @@
 ---
 css: >-
   @media (prefers-color-scheme: light){
-    img {
+    img[alt~="Markology"] {
       content: url("/assets/markology.light.png");
     }
   }
@@ -66,7 +66,7 @@ css: >-
   <a href="https://apps.apple.com/us/app/markology/id1553649446?itsct=apps_box"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83" alt="Download on the App Store"></a>
 </h1>
 
-![Markology on MacOS and iOS](/assets/markology.png)
+![Markology on macOS and iOS](/assets/markology.png)
 
 ## What is this?
 
