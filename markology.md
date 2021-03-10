@@ -70,7 +70,7 @@ css: >-
 
 ## What is this?
 
-An opinionated, zettelkasten-inspired note creation and linking tool.
+An opinionated, [open source](https://github.com/idkclub/markology), zettelkasten-inspired note creation and linking tool.
 
 ## Supports:
 
