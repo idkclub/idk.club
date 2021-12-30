@@ -5,6 +5,7 @@
 html {
   color-scheme: dark light;
   font-family: sans-serif;
+  height: -webkit-fill-available;
 }
 
 a {
