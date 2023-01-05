@@ -1,11 +1,3 @@
----
-css: >-
-  @media (prefers-color-scheme: light){
-    img[alt~="Markology"] {
-      content: url("/assets/markology.light.png");
-    }
-  }
----
 <h1>
   <a href="/markology">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 8 8" width="40" id="arco">
@@ -74,7 +66,7 @@ An opinionated, [open source](https://github.com/idkclub/markology), zettelkaste
 
 ## Supports:
 
-- Markdown (via [Down](https://github.com/johnxnguyen/Down)).
+- Markdown (via [swift-markdown](https://github.com/apple/swift-markdown)).
 - Offline usage and search (via [GRDB](https://github.com/groue/GRDB.swift)).
 - iCloud syncing.
 
